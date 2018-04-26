@@ -2,9 +2,7 @@
 <projectDescription>
 	<name>Shop Project</name>
 	<comment>
-Project name: Shop Project
-
-More detailed information here... </comment>
+Project name: Shop Project </comment>
 	<projects/>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
