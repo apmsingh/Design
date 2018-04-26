@@ -1,0 +1,7 @@
+#git ignore
+*/.gradle
+/.gradle
+/.settings
+/build
+/gradle
+*.classpath

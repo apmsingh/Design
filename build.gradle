@@ -1,0 +1,80 @@
+apply plugin: 'eclipse'
+apply plugin: 'java'
+description ="""
+Example project for a Gradle build
+
+Project name: ${project.name}
+
+More detailed information here... """
+//gradle init --type 'java-library'
+// to automcatically creatuing the gradle project
+
+// to create the wrapper of for downloading the gradle version
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.11'
+}
+
+task copyFile(type: Copy) {
+    from 'source'
+    into 'destination'
+}
+
+
+task hello {
+   doFirst{
+    println '$Hello Gradle$'
+	}
+	// hello world this line is commented
+	println 'After comment line'
+	/*
+	  multiline comments
+	
+	*/
+	println 'After comment multi-line' + project.name
+}
+
+/*
+task helloWorld {
+     group 'helloWorld'
+     description 'The hello task greets Gradle by saying "Hello Gradle"'
+     println 'Hello Gradle ss'
+     doFirst {
+        println 'Hello Gradle'
+     }
+	 println 'Hello Gradle ss3444'
+     doLast {
+        println 'Bye bye Gradle'
+     }
+}
+
+
+task onlySpecifiesCodeForConfigurationPhase {
+    group 'vogella'
+    description 'Configuration phase task example.'
+
+    println 'I always get printed even though, I am not invoked'
+}
+
+task anotherUnrelatedTask {
+    doLast {
+        println 'I am in the doLast execution phase'
+    }
+}
+
+// to serach for the dependencies
+// details of document
+// http://www.vogella.com/tutorials/Gradle/article.html
+
+repositories {
+  mavenCentral ()
+}
+
+dependencies {
+    //compile fileTree(dir: 'libs', include: ['*.jar'])
+    //compile 'com.squareup.okhttp:okhttp:2.5.0'
+    //testCompile 'junit:junit:4.12'
+    compile "commons-fileupload:commons-fileupload:1.3.1"
+}
+
+*/
+
