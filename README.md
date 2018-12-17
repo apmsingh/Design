@@ -1,2 +1,2 @@
 # Project Shop
-Project Shop
+Design Project

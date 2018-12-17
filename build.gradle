@@ -3,17 +3,10 @@ apply plugin: 'java'
 
 description ="""
 Project name: ${project.name} """
- 
-//gradle init --type 'java-library'
-// to automcatically creatuing the gradle project
-// to create the wrapper of for downloading the gradle version
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.11'
 }
-
-// to serach for the dependencies i.e. details of document
-// http://www.vogella.com/tutorials/Gradle/article.html
 
 repositories {
   mavenCentral ()
