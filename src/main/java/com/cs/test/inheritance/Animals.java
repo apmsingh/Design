@@ -11,4 +11,13 @@ public class Animals {
   {
     System.out.println(Animals.class.getSimpleName());
   }
+  
+  void showMyName() {
+    System.out.println("My name is " + Animals.class.getSimpleName());
+  }
+  
+  void showCategory() {
+    System.out.println("I belong from " + Animals.class.getSimpleName());
+  }
+  
 }

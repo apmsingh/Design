@@ -18,4 +18,12 @@ public class Dog extends Animals {
   {
     System.out.println(Dog.class.getSimpleName());
   }
+  
+  void showMyName() {
+    System.out.println("My name is " + Dog.class.getSimpleName());
+  }
+  
+  void showCategory(String dogName) {
+    System.out.println("I belong from " + dogName);
+  }
 }

@@ -11,6 +11,12 @@ public class Executor {
     dog.getAnimal();
     dog.getParentName();
     
+    animals.showMyName();
+    // Overide showMyName() method in subClass
+    dog.showMyName();
+    
+    dog.showCategory();
+    dog.showCategory("Labrador");
     animals = dog;
     // It cannot access child class member
     //animals.getAnimals();
