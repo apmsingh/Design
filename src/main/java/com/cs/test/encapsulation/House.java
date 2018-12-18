@@ -1,6 +1,5 @@
 package com.cs.test.encapsulation;
 
-import java.util.Date;
 import java.util.UUID;
 
 public class House extends HouseManagement {
