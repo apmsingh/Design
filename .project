@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Shop Project</name>
+	<name>Design</name>
 	<comment>
-Project name: Shop Project </comment>
+Project name: Design </comment>
 	<projects/>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
@@ -14,4 +14,5 @@ Project name: Shop Project </comment>
 		</buildCommand>
 	</buildSpec>
 	<linkedResources/>
+	<filteredResources/>
 </projectDescription>

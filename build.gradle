@@ -13,5 +13,6 @@ repositories {
 }
 
 dependencies {
+   //compile group: 'org.springmodules', name: 'spring-modules-validation', version: '0.7'
    
 }
