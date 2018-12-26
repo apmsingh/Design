@@ -15,7 +15,7 @@ public class ExtendingThread extends Thread {
     for (int i = 0; i < 5; i++) {
       try {
         System.out.println(this.getName() + " " + i);
-        Thread.sleep(100);
+        Thread.sleep(500);
       }
       catch (InterruptedException e) {
         e.printStackTrace();
