@@ -11,6 +11,13 @@ public class ImplementingRunnable implements Runnable {
     t.start();
   }
   
+  public ImplementingRunnable(String threadName)
+  {
+    t = new Thread(this, threadName);
+    System.out.println("Constructor Assingment Done");
+    t.start();
+  }
+  
   @Override
   public void run()
   {
