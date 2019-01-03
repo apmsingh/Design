@@ -4,6 +4,10 @@ public class TaskExecutor {
   
   public static void main(String[] args)
   {
+    ImplementingRunnable threadOne = new ImplementingRunnable("First thread ");
+    ImplementingRunnable threadTwo = new ImplementingRunnable("Second thread ");
+    ImplementingRunnable threadThree = new ImplementingRunnable("Third thread ");
+    /*
     Thread currentThread = Thread.currentThread();
     System.out.println("Current Thread: " + currentThread);
     
@@ -31,5 +35,5 @@ public class TaskExecutor {
       e.printStackTrace();
     }
     System.out.println("Main Thread Finished");
-  }
+  */}
 }
