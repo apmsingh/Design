@@ -7,9 +7,10 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 class Data implements Serializable {
-  
   int i = 10;
-  int j = 20;
+  transient int j = 20;
+  static int k = 40;
+  final int l = 80;
 }
 
 public class SerializationDemo {
@@ -29,6 +30,6 @@ public class SerializationDemo {
         "D:/Abhay/Private/test/serialization.ser");
     ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
     Data readObject = (Data) objectInputStream.readObject();
-    System.out.println(readObject.i + " " + readObject.j);
+    System.out.println(readObject.i + " " + readObject.j + " " + readObject.k + " " + readObject.l);
   }
 }
