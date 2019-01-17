@@ -10,6 +10,7 @@ class SerializeAccount implements Serializable {
   
   String                username              = "Abhay";
   transient String      pass                  = "password";
+  transient String      pinCode               = "1234";
   OtherSerializeAccount otherSerializeAccount = new OtherSerializeAccount();
   
   private void writeObject(ObjectOutputStream objectOutputStream) throws Exception
@@ -17,7 +18,9 @@ class SerializeAccount implements Serializable {
     System.out.println("Inside the output stream");
     objectOutputStream.defaultWriteObject();
     String encPass = "Ency_" + pass;
+    String encPinCode = "Pin_" + pinCode;
     objectOutputStream.writeObject(encPass);
+    objectOutputStream.writeObject(encPinCode);
   }
   
   private void readObject(ObjectInputStream objectInputStream) throws Exception
@@ -27,6 +30,9 @@ class SerializeAccount implements Serializable {
     String encpass = (String) objectInputStream.readObject();
     String pass = encpass.substring(5);
     this.pass = pass;
+    String encPinCode = (String) objectInputStream.readObject();
+    String pinCode = encPinCode.substring(4);
+    this.pinCode = pinCode;
   }
 }
 
@@ -47,13 +53,12 @@ class OtherSerializeAccount implements Serializable {
   }
 }
 
-
 public class CustomSerialization {
   
   public static void main(String[] args) throws Exception
   {
     SerializeAccount data = new SerializeAccount();
-    System.out.println(data.username + " " + data.pass);
+    System.out.println(data.username + " " + data.pass + " " + data.pinCode);
     FileOutputStream fileOutputStream = new FileOutputStream(
         "D:/Abhay/Private/test/serialization.ser");
     ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
@@ -64,7 +69,8 @@ public class CustomSerialization {
         "D:/Abhay/Private/test/serialization.ser");
     ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
     SerializeAccount readObject = (SerializeAccount) objectInputStream.readObject();
-    System.out.println(readObject.username + " " + readObject.pass + " " + readObject.otherSerializeAccount.i);
+    System.out.println(
+        readObject.username + " " + readObject.pass + " " + readObject.otherSerializeAccount.i + " " + readObject.pinCode);
     
   }
 }
