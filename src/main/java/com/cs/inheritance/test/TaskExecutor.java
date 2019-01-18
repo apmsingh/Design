@@ -1,26 +1,46 @@
 package com.cs.inheritance.test;
 
 class InheritA {
-
-  public static void m1() {
+  
+  public static void m1()
+  {
     System.out.println("Inside m1");
   }
   
-  public void m2() {
+  public void m2()
+  {
     System.out.println("Inside m2");
+  }
+  
+  public InheritA()
+  {
+  }
+  
+  public InheritA(int j)
+  {
   }
 }
 
 class InheritB extends InheritA {
   
   // Static method can't override
-  public static void m1() {
+  public static void m1()
+  {
     System.out.println("Inside B m1");
   }
   
   @Override
-  public void m2() {
+  public void m2()
+  {
     System.out.println("Inside B m2");
+  }
+  
+  public InheritB(int i)
+  {
+  }
+  
+  public InheritB()
+  {
   }
 }
 
