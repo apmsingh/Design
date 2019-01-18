@@ -14,6 +14,7 @@ import java.io.ObjectOutputStream;
  * is managing the write and read value. So no use of transient keyword
  * 
  */
+
 class ExternalizableAccount implements Externalizable {
   
   String accountNo;
@@ -23,6 +24,8 @@ class ExternalizableAccount implements Externalizable {
   public ExternalizableAccount()
   {
     System.out.println("Inside Default Constructor");
+    int age;
+    
   }
   
   public ExternalizableAccount(String accountNo, String name, int age)
@@ -53,7 +56,7 @@ public class ExternaliableDemo {
   
   public static void main(String[] args) throws Exception
   {
-    ExternalizableAccount data = new ExternalizableAccount("12345", "Abhay", 25);
+    ExternalizableAccount data = new ExternalizableAccount("12345","Abhay", 25);
     FileOutputStream fileOutputStream = new FileOutputStream(
         "D:/Abhay/Private/test/serialization.ser");
     ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
